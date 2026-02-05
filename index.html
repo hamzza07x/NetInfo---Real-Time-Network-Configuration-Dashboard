@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Info</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <span class="theme-icon" id="themeIcon">🌙</span>
+        <span id="themeText">Dark</span>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Network Info</h1>
+            <p class="subtitle">Real-time network configuration and IP details</p>
+        </header>
+
+        <div class="glass-card">
+            <h2 class="card-title">
+                <span class="card-icon">🌐</span>
+                Your IP Address
+                <span class="device-type" id="deviceType">...</span>
+            </h2>
+            <div class="highlight" id="publicIP">
+                <span class="loading"></span>
+            </div>
+            <div style="text-align: center; margin-top: 8px; color: var(--text-secondary); font-size: 0.85rem;">
+                Public IP
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2 class="card-title">
+                <span class="card-icon">🏠</span>
+                Local Network
+            </h2>
+            <div class="info-grid" id="localNetworkInfo">
+                <div class="info-item">
+                    <span class="info-label">Loading...</span>
+                    <span class="info-value"><span class="loading"></span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2 class="card-title">
+                <span class="card-icon">📍</span>
+                Location Details
+            </h2>
+            <div class="info-grid" id="locationInfo">
+                <div class="info-item">
+                    <span class="info-label">Loading...</span>
+                    <span class="info-value"><span class="loading"></span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2 class="card-title">
+                <span class="card-icon">🔌</span>
+                Network Configuration
+            </h2>
+            <div class="info-grid" id="networkInfo">
+                <div class="info-item">
+                    <span class="info-label">Loading...</span>
+                    <span class="info-value"><span class="loading"></span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2 class="card-title">
+                <span class="card-icon">💻</span>
+                Browser & Device Info
+            </h2>
+            <div class="info-grid" id="deviceInfo">
+                <div class="info-item">
+                    <span class="info-label">Loading...</span>
+                    <span class="info-value"><span class="loading"></span></span>
+                </div>
+            </div>
+        </div>
+
+        <button class="refresh-btn" onclick="refreshWithAnimation()">
+            <span class="refresh-icon">🔄</span> Refresh Data
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
